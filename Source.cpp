@@ -1,0 +1,2 @@
+﻿#include<windows.h>
+LRESULT CALLBACK p(HWND g,UINT m,WPARAM w,LPARAM l){if(m-2)return DefWindowProc(g,m,w,l);PostQuitMessage(0);return 0;}int wWinMain(HMODULE i,HMODULE,LPWSTR,INT){MSG m;WNDCLASS w={67,p,0,0,i,0,0,0,0,L"1"};RegisterClass(&w);HWND g=CreateWindow(L"1",0,207<<16,0,0,640,480,0,0,i,0);ShowWindow(g,1);UpdateWindow(g);while(GetMessage(&m,0,0,0)){TranslateMessage(&m);DispatchMessage(&m);}}
